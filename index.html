@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my-site | Cafe Blog Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coffee: {
+                            50: '#fdfbf7',
+                            100: '#f7f2e8',
+                            200: '#ebdcc5',
+                            300: '#ddc29d',
+                            400: '#cd9f6a',
+                            500: '#b88143',
+                            600: '#9c6536',
+                            700: '#7e4d2f',
+                            800: '#673f2b',
+                            900: '#543425',
+                            950: '#2e1911',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Georgia', 'Cambria', 'Noto Serif TC', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Noto Serif TC', Georgia, serif;
+        }
+    </style>
+</head>
+<body class="bg-coffee-50 text-coffee-900 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Command Status Bar (Simulating CLI result) -->
+    <div class="bg-coffee-950 text-coffee-200 text-xs px-4 py-2 font-mono flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+            <span>Status: <strong>Page Loaded</strong></span>
+        </div>
+        <div class="space-x-4 opacity-80">
+            <span>Page: <code class="text-amber-300">my-site</code></span>
+            <span>Template: <code class="text-amber-300">cafe</code></span>
+            <span>Mode: <code class="text-amber-300">preview</code></span>
+        </div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="border-b border-coffee-200 bg-coffee-100/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wider text-coffee-900 hover:text-coffee-700 transition">
+                ☕ MY-SITE <span class="text-xs font-normal text-coffee-600 border border-coffee-300 px-2 py-0.5 rounded-full ml-1">Cafe Template</span>
+            </a>
+            <nav class="space-x-6 text-sm text-coffee-800 font-medium">
+                <a href="#about" class="hover:text-coffee-600 transition">關於本站</a>
+                <a href="#posts" class="hover:text-coffee-600 transition">文章特輯</a>
+                <a href="#menu" class="hover:text-coffee-600 transition">今日推薦</a>
+                <a href="#contact" class="hover:text-coffee-600 transition">聯絡資訊</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-b from-coffee-100 to-coffee-50 py-16 px-6 text-center border-b border-coffee-200">
+        <div class="max-w-3xl mx-auto">
+            <span class="text-coffee-600 uppercase tracking-widest text-xs font-semibold">Welcome to my-site</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-coffee-900 mt-3 mb-4 leading-tight">
+                咖啡香氣裡的文字隨筆
+            </h1>
+            <p class="text-coffee-700 leading-relaxed text-base md:text-lg mb-8">
+                在這裡，我們紀錄每一杯手的沖溫度、每一段日光午後的安靜時光，以及生活裡微小而美好的細節。
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#posts" class="bg-coffee-800 text-coffee-50 px-6 py-2.5 rounded-md hover:bg-coffee-700 transition font-medium text-sm shadow">閱讀最新文章</a>
+                <a href="#about" class="border border-coffee-400 text-coffee-800 px-6 py-2.5 rounded-md hover:bg-coffee-200/50 transition font-medium text-sm">探索空間</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-5xl mx-auto px-6 py-12 flex-grow">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Article Area (2 cols) -->
+            <div class="md:col-span-2 space-y-8" id="posts">
+                <h2 class="text-xl font-bold border-b border-coffee-300 pb-2 text-coffee-900 flex items-center justify-between">
+                    <span>最新文章 / Latest Posts</span>
+                    <span class="text-xs font-normal text-coffee-600">3 篇發布</span>
+                </h2>
+
+                <!-- Card 1 -->
+                <article class="bg-white p-6 rounded-xl border border-coffee-200 shadow-sm hover:shadow-md transition">
+                    <div class="text-xs text-coffee-500 mb-2">2026-10-15 • 咖啡豆札記</div>
+                    <h3 class="text-xl font-bold text-coffee-900 mb-2 hover:text-coffee-600 transition">
+                        <a href="#">淺談埃塞俄比亞日曬豆的果香味來源</a>
+                    </h3>
+                    <p class="text-coffee-700 text-sm line-clamp-3 mb-4 leading-relaxed">
+                        當熱水穿透細緻磨粉的瞬間，一陣如莓果般奔放的甜香便隨之蔓延。日曬處理法保留了最原始的果肉風味，讓咖啡不僅僅是苦澀，更帶有層次豐富的酸甜變化...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-coffee-600 pt-3 border-t border-coffee-100">
+                        <span>閱讀時間約 4 分鐘</span>
+                        <a href="#" class="font-semibold hover:underline text-coffee-800">閱讀全文 →</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="bg-white p-6 rounded-xl border border-coffee-200 shadow-sm hover:shadow-md transition">
+                    <div class="text-xs text-coffee-500 mb-2">2026-10-10 • 下午茶食譜</div>
+                    <h3 class="text-xl font-bold text-coffee-900 mb-2 hover:text-coffee-600 transition">
+                        <a href="#">手作焦糖瑪德蓮與黑咖啡的黃金搭檔</a>
+                    </h3>
+                    <p class="text-coffee-700 text-sm line-clamp-3 mb-4 leading-relaxed">
+                        烘焙出完美「肚臍」的瑪德蓮，外皮帶點輕微微脆，內部綿密多汁。搭配一杯無糖的黑咖啡，能完美平衡焦糖的甜膩感，是秋冬午後最棒的自我犒賞...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-coffee-600 pt-3 border-t border-coffee-100">
+                        <span>閱讀時間約 3 分鐘</span>
+                        <a href="#" class="font-semibold hover:underline text-coffee-800">閱讀全文 →</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="bg-white p-6 rounded-xl border border-coffee-200 shadow-sm hover:shadow-md transition">
+                    <div class="text-xs text-coffee-500 mb-2">2026-10-02 • 質感生活</div>
+                    <h3 class="text-xl font-bold text-coffee-900 mb-2 hover:text-coffee-600 transition">
+                        <a href="#">打造居家 Home Cafe 的五個質感道具推薦</a>
+                    </h3>
+                    <p class="text-coffee-700 text-sm line-clamp-3 mb-4 leading-relaxed">
+                        不用花大錢，只需要一把細口壺、好質感的復古玻璃杯與木質托盤，就能在自己的小房間裡，營造出宛如專業咖啡館般的沉靜氛圍...
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-coffee-600 pt-3 border-t border-coffee-100">
+                        <span>閱讀時間約 5 分鐘</span>
+                        <a href="#" class="font-semibold hover:underline text-coffee-800">閱讀全文 →</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Sidebar (1 col) -->
+            <aside class="space-y-6">
+                <!-- About Card -->
+                <div class="bg-coffee-100 p-6 rounded-xl border border-coffee-200 text-center" id="about">
+                    <div class="w-20 h-20 bg-coffee-300 rounded-full mx-auto mb-3 flex items-center justify-center text-2xl shadow-inner">
+                        ☕
+                    </div>
+                    <h3 class="font-bold text-coffee-900 text-lg">關於 my-site</h3>
+                    <p class="text-xs text-coffee-700 mt-2 leading-relaxed">
+                        套用 Cafe 部落格模板。這裡是一個分享咖啡文化、特調配方與慢生活哲學的角落。
+                    </p>
+                </div>
+
+                <!-- Daily Recommends -->
+                <div class="bg-white p-5 rounded-xl border border-coffee-200 shadow-sm" id="menu">
+                    <h4 class="font-bold text-coffee-900 text-sm border-b border-coffee-200 pb-2 mb-3">
+                        今日推薦特調 / Daily Special
+                    </h4>
+                    <ul class="space-y-2 text-xs text-coffee-800">
+                        <li class="flex justify-between items-center">
+                            <span>燕麥奶手沖拿鐵</span>
+                            <span class="text-coffee-500 font-mono">$160</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>肉桂香氣手沖咖啡</span>
+                            <span class="text-coffee-500 font-mono">$150</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>巴斯克乳酪蛋糕</span>
+                            <span class="text-coffee-500 font-mono">$130</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tags -->
+                <div class="bg-white p-5 rounded-xl border border-coffee-200 shadow-sm">
+                    <h4 class="font-bold text-coffee-900 text-sm border-b border-coffee-200 pb-2 mb-3">標籤分類</h4>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="text-xs bg-coffee-100 text-coffee-800 px-2.5 py-1 rounded-full border border-coffee-200"># 手沖咖啡</span>
+                        <span class="text-xs bg-coffee-100 text-coffee-800 px-2.5 py-1 rounded-full border border-coffee-200"># 甜點食譜</span>
+                        <span class="text-xs bg-coffee-100 text-coffee-800 px-2.5 py-1 rounded-full border border-coffee-200"># 慢生活</span>
+                        <span class="text-xs bg-coffee-100 text-coffee-800 px-2.5 py-1 rounded-full border border-coffee-200"># 器具開箱</span>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-coffee-900 text-coffee-300 py-8 text-center text-xs border-t border-coffee-800 mt-auto">
+        <div class="max-w-5xl mx-auto px-6 space-y-2">
+            <p>© 2026 my-site. Powered by Cafe Template.</p>
+            <p class="text-coffee-500">此頁面為套用 Cafe 部落格模板後的預覽成果</p>
+        </div>
+    </footer>
+
+</body>
+</html>
